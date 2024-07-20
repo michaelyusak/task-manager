@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="new-activity-modal hidden" id="new-activity-modal">
+      <div class="overlay"></div>
+
+      <div class="new-activity-input">
+        <p>Activity:</p>
+        <textarea id="new-activity-textarea"></textarea>
+
+        <div class="action">
+          <button id="save-new-activity">Save</button>
+          <button id="cancel-new-activity">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="edit-activity-modal hidden" id="edit-activity-modal">
+        <div class="overlay"></div>
+  
+        <div class="edit-activity-input">
+          <p>Activity:</p>
+          <textarea id="edit-activity-textarea"></textarea>
+  
+          <div class="action">
+            <button id="save-edited-activity">Save</button>
+            <button id="cancel-edited-activity">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+    <section class="wrapper">
+      <div class="logo">
+        <h1>Task Manager</h1>
+      </div>
+
+      <div class="main-content">
+        <div class="upper-div">
+          <button class="new-activity-button" id="new-activity-button">
+            New Activity
+          </button>
+
+          <div class="filter">
+            <p>Filter by Status</p>
+            <select name="status" id="status">
+              <option value="none">All Status</option>
+              <option value="done">Done</option>
+              <option value="pending">Pending</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tasks-wrapper" id="tasks-wrapper"></div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
